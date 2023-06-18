@@ -1,5 +1,10 @@
 # SomossyLaszloModulzaroHost
 
+
+This is a firebase image gallery that accepts votes and sorts them in descending order based on the votes. 
+
+You can try it at the following link: https://somossy-laszlo-modulzaro-host.web.app/login
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
 ## Development server
