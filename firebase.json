@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "somossy-laszlo-modulzaro-host",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

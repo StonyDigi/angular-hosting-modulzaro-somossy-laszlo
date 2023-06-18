@@ -1,0 +1,31 @@
+<div class="content container-fluid">
+    <h1 class="mb-3">Hello, {{auth.getCurrentUser()?.name}}!</h1>
+        <h3 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i> 
+          Welcome to the gallery!</h3>
+        <button (click)="logout()" type="button" class="btn btn-secondary btn-danger mb-5">Logout</button>
+    
+        <div class="content container-fluid bg-dark rounded text-light custom-shadow ">
+          <h3 class="mb-2"><strong>Submit a picture</strong></h3>
+          <label class="mb-2">Image title</label>
+          <input class="form-control" type="text" [(ngModel)]="this.title" required [ngClass]="{ 'is-invalid': !title }"/>
+          <div *ngIf="!title" class="invalid-feedback">This field is required.</div>
+          <label class="mt-2 mb-2">Image remote location</label>
+          <input class="form-control" type="text" [(ngModel)]="this.url" required [ngClass]="{ 'is-invalid': !url }"/>
+          <div *ngIf="!url" class="invalid-feedback">This field is required.</div>
+          <button *ngIf="url && title" class=" mt-2 btn btn-success" (click)="send()" type="submit">Send</button>
+        </div>
+    
+        <div class="row">
+          <h1 class="text-center mt-5 mb-5"><strong>Gallery of art</strong></h1>
+          <div *ngFor="let image of this.service.gallery" class="col-sm-4 col-md-4 col-lg-3 col-xl-2">
+            <div class="card custom-shadow-card p-2 mt-3">
+              <h3 class="text-center m-2 p-2">{{image.title}}</h3>
+              <img height="200" [src]="image.url" alt="Kép" class="card-img-top mb-5">
+              <button (click)="this.service.vote(image)"  type="button" class="btn btn-warning">Vote</button>
+            <p>
+              ({{getVoteCount(image)}} vote)
+              </p>
+              
+            </div>
+          </div>
+        </div>

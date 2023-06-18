@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "somossy-laszlo-modulzaro-host": {
+      "hosting": {
+        "somossy-laszlo-modulzaro-host": [
+          "somossy-laszlo-modulzaro-host"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "somossy-laszlo-modulzaro-host"
+  }
+}

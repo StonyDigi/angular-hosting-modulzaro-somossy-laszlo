@@ -1,0 +1,19 @@
+.content {
+    background: #FFC107;
+    width: auto;
+    padding: 26px;
+    
+}
+
+.custom-shadow {
+    box-shadow: 1px 2px 25px rgb(23, 33, 25);
+}
+
+.custom-shadow-card {
+    box-shadow: 4px 5px 15px rgb(23, 33, 25);
+}
+
+p {
+    text-align: center;
+    font-weight: 500;
+}
